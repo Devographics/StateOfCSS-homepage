@@ -1,0 +1,42 @@
+.About__Authors {
+  @include large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $spacing;
+  }
+}
+
+.Share__Options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      path {
+        fill: $text-color;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $hover-color;
+        }
+      }
+    }
+  }
+}
+
+.Actions {
+  text-align: center;
+  .button {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.ViewResults {
+  margin-top: $spacing;
+}
