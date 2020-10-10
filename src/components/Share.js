@@ -1,5 +1,6 @@
 import React from "react"
 import ReactGA from "react-ga"
+import { useI18n } from "core/i18n/i18nContext"
 
 const trackShare = (platform, section) => {
   return () => {
@@ -100,20 +101,22 @@ const Email = ({ subject, body }) => {
   )
 }
 
-export default class Share extends React.Component {
-  render() {
-    return (
-      <div className="Block Block--Share Share">
-        <h3 className="Block__Heading">Help Spread the Word!</h3>
-        <div className="Block__Content Share__Options">
-          <Twitter text="The State Of CSS: take the survey and help us find out the latest CSS trends https://stateofcss.com #StateOfCSS" />
-          <Facebook link="https://stateofcss.com" />
-          <Email
-            subject="The State Of CSS"
-            body="The State Of CSS: take the survey and help us find out the latest CSS trends https://stateofcss.com"
-          />
-        </div>
+const Share = () => {
+  const { translate } = useI18n()
+
+  return (
+    <div className="Block Block--Share Share">
+      <h3 className="Block__Heading">{translate("share.help_spread")}</h3>
+      <div className="Block__Content Share__Options">
+        <Twitter text="The State Of CSS: take the survey and help us find out the latest CSS trends https://stateofcss.com #StateOfCSS" />
+        <Facebook link="https://stateofcss.com" />
+        <Email
+          subject="The State Of CSS"
+          body="The State Of CSS: take the survey and help us find out the latest CSS trends https://stateofcss.com"
+        />
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default Share

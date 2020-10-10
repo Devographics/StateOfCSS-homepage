@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import fetch from 'isomorphic-fetch'
+import { useI18n } from "core/i18n/i18nContext"
 
 const postUrl =
     'https://emailoctopus.com/lists/ed0386c4-2f55-11e9-a3c9-06b79b628af2/members/embedded/1.3/add'
@@ -57,6 +58,8 @@ export default class Newsletter extends Component {
     }
 
     render() {
+        const { translate } = useI18n()
+
         const { submitLabel = 'Notify Me' } = this.props
         const { email, loading, error, success } = this.state
 
@@ -66,9 +69,9 @@ export default class Newsletter extends Component {
                     loading ? 'loading' : ''
                 }`}
             >
-                <h3 className="Block__Heading">Stay Tuned</h3>
+                <h3 className="Block__Heading">{translate('newsletter.stay_tuned')}</h3>
                 <p className="Block__Concent">
-                    Leave us your email and we’ll let you know when the next survey takes place.
+                    {translate('newsletter.leave_your_email')}
                 </p>
 
                 {success ? (
