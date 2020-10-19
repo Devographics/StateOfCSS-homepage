@@ -1,6 +1,6 @@
 import React from "react"
 
-const surveyUrl = 'https://app.stateofjs.com/survey/state-of-css/2020';
+const surveyUrl = 'https://survey.stateofjs.com/survey/state-of-css/2020';
 
 export default () => (
   <div className="TakeSurvey">
