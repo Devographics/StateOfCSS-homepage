@@ -5,8 +5,8 @@ import "../stylesheets/screen.scss"
 export default class Layout extends React.Component {
   render() {
     const description = "The annual survey about the latest trends in CSS."
-    const url = "http://stateofcss.com"
-    const image = "http://stateofcss.com/images/stateofcss_socialmedia.png"
+    const url = "https://stateofcss.com"
+    const image = "https://stateofcss.com/images/stateofcss_socialmedia.png"
     const title = "The State of CSS Survey"
     const meta = [
       { charset: "utf-8" },
@@ -20,7 +20,7 @@ export default class Layout extends React.Component {
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       // twitter
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image:src", content: image },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
