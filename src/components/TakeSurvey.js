@@ -4,25 +4,30 @@ import qs from "qs"
 const surveyUrl = "https://survey.stateofjs.com/survey/state-of-css/2020"
 
 export default () => {
-  let suffix = ''
+  let suffix = ""
   const [source, setSource] = useState()
+  const [email, setEmail] = useState()
   const [referrer, setReferrer] = useState()
 
   useEffect(() => {
-    const q = qs.parse(window.location.href.split('?')[1])
+    const q = qs.parse(window.location.href.split("?")[1])
     setSource(q.source)
+    setEmail(q.email)
     if (document.referrer) {
       setReferrer(document.referrer)
     }
   })
 
   if (source || referrer) {
-    suffix = '?'
+    suffix = "?"
     if (source) {
       suffix += `source=${source}&`
     }
     if (referrer) {
       suffix += `referrer=${referrer}&`
+    }
+    if (email) {
+      suffix += `email=${email}&`
     }
   }
 
