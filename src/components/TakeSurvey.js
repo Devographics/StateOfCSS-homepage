@@ -18,7 +18,7 @@ export default () => {
     }
   })
 
-  if (source || referrer) {
+  if (source || referrer || email) {
     suffix = "?"
     if (source) {
       suffix += `source=${source}&`
