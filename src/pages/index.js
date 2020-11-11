@@ -19,9 +19,9 @@ const Index = () => (
     <Logo />
     <div className="Content Content--Home Home layout-narrow">
       <Intro />
-      {/* <ResultsComingSoon /> */}
+      <ResultsComingSoon />
       <div className="Block Actions Block--Actions">
-        <TakeSurvey />
+        {/* <TakeSurvey /> */}
         <ViewResults />
       </div>
       <Share />
