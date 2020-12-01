@@ -5,10 +5,10 @@ export default class ViewResults extends React.Component {
     return (
       <div className="ViewResults">
         <a
-          // className="button large-button"
-          href="https://2019.stateofcss.com"
+          className="button large-button"
+          href="https://2020.stateofcss.com"
         >
-          View 2019 Results
+          View Results
         </a>
       </div>
     )
