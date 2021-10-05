@@ -1,16 +1,21 @@
-import React from 'react'
+import React from 'react';
 
 const Intro = () => (
-    <div className="Block Block--intro Intro introtext">
-        <h2>CSS is evolving faster than ever.</h2>
-        <p> Flexbox, Grid, Multi-Column… To say nothing of whole new paradigms like CSS-in-JS.</p>
-        <p>
-            So after the success of our annual{' '}
-            <a href="https://stateofjs.com">State Of JavaScript</a> survey, we’ve decided to take on
-            the world of styles and selectors to help identify the latests trends… and try to bridge
-            the ever-growing “great front-end divide”!
-        </p>
-    </div>
-)
+  <div className="Block Block--intro Intro introtext">
+    <h2>Hey CSS, what have you been up to lately?</h2>
+    <p>
+      Oh really, <code>@container</code>? Oh and intrinsic sizing? And <code>@property</code> too?! Wow, you've been
+      busy!
+    </p>
+    <p>
+      Even though the pandemic kept on making everybody's lives harder throughout 2021, somehow dedicated contributors
+      around the world managed to keep CSS moving forward.
+    </p>
+    <p>
+      And so once more it's time to survey the CSS ecosystem and figure out where this is all going… and maybe learn
+      about a few new things while you're at it!
+    </p>
+  </div>
+);
 
-export default Intro
+export default Intro;

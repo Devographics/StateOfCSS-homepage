@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import qs from "qs"
 
-const surveyUrl = "https://survey.stateofjs.com/survey/state-of-css/2020"
+const surveyUrl = "https://survey.stateofjs.com/survey/state-of-css/2021"
 
 export default () => {
   let suffix = ""
@@ -16,7 +16,7 @@ export default () => {
     if (document.referrer) {
       setReferrer(document.referrer)
     }
-  })
+  }, [])
 
   if (source || referrer || email) {
     suffix = "?"

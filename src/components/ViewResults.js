@@ -8,7 +8,7 @@ export default class ViewResults extends React.Component {
           className="button large-button"
           href="https://2020.stateofcss.com"
         >
-          View Results
+          View 2020 Results
         </a>
       </div>
     )
