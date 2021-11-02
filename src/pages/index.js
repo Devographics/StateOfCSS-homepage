@@ -1,5 +1,5 @@
 import React from "react"
-// import ResultsComingSoon from "../components/ResultsComingSoon"
+import ResultsComingSoon from "../components/ResultsComingSoon"
 import Share from "../components/Share"
 import Newsletter from "../components/Newsletter"
 import TakeSurvey from "../components/TakeSurvey"
@@ -19,9 +19,9 @@ const Index = () => (
     <Logo />
     <div className="Content Content--Home Home layout-narrow">
       <Intro />
-      {/* <ResultsComingSoon /> */}
       <div className="Block Actions Block--Actions">
-        <TakeSurvey />
+      <ResultsComingSoon />
+        {/* <TakeSurvey /> */}
         <ViewResults />
       </div>
       <Share />
